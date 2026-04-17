@@ -77,6 +77,8 @@ result.predStr = numToDate(predictTimestamp);
     res.status(500).json({ error: "Server error" });
   }
 });
-app.listen(3000, () => {
-  console.log(`🚀 Server chạy tại http://localhost:3000`);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server đang chạy trên port ${PORT}`);
 });
